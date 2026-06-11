@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flickr History</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Flickr History</h1>
+      <p>Uncover the story behind any public Flickr photo — when it was taken, first archived, and every time the page changed.</p>
+    </header>
+
+    <section class="search">
+      <form id="search-form">
+        <input
+          type="url"
+          id="url-input"
+          placeholder="https://www.flickr.com/photos/username/photo-id/"
+          required
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button type="submit" id="submit-btn">Analyze</button>
+      </form>
+      <p class="hint">
+        Sources: <span class="tag">Wayback Machine</span> <span class="tag">EXIF</span> <span class="tag">Flickr oEmbed</span>
+      </p>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Gathering history&hellip;</span>
+      </div>
+
+      <div id="error-box" class="error-box hidden"></div>
+
+      <div id="photo-card" class="photo-card hidden">
+        <img id="photo-thumb" src="" alt="" loading="lazy">
+        <div class="photo-meta">
+          <h2 id="photo-title"></h2>
+          <p id="photo-author" class="muted"></p>
+          <a id="photo-link" href="" target="_blank" rel="noopener noreferrer">View on Flickr &rarr;</a>
+        </div>
+      </div>
+
+      <div id="sources-row" class="sources-row hidden"></div>
+
+      <div id="timeline-section" class="timeline-section hidden">
+        <h3 class="section-label">Timeline</h3>
+        <div id="timeline-list" class="timeline-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "flickr-history",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "node ./node_modules/typescript/bin/tsc",
+    "dev": "netlify dev"
+  },
+  "devDependencies": {
+    "@netlify/functions": "^2.8.2",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^10.7.9"
+  }
+}
